@@ -5,3 +5,5 @@ venv
 .vscode
 
 **/*pyc
+
+envs/.env_db

@@ -1,9 +1,34 @@
 services:
-  backend_e_menu:
+  backend:
+    restart: on-failure
     build:
       context: ./backend
-    volumes:
-      - ./backend:/app
     ports:
       - 8000:8000
-    restart: on-failure
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - backend_db
+    env_file:
+      - ./envs/.env_db
+    networks:
+      - backend_db-network
+  backend_db:
+    image: postgres:15.1
+    ports:
+      - 5433:5432
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    env_file:
+      - ./envs/.env_db
+    networks:
+      - backend_db-network
+
+volumes:
+  postgres:
+
+networks:
+  backend-network:
+    driver: bridge
+  backend_db-network:
+    driver: bridge
