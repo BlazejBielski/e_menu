@@ -7,14 +7,16 @@ class Feature(models.Model):
     name = models.CharField(max_length=25, unique=True)
     description = models.TextField()
     date_of_add = models.DateTimeField(auto_now_add=True)
-    date_of_actualisation = models.DateField(auto_now=True)
+    date_of_actualisation = models.DateTimeField(auto_now=True)
 
     class Meta:
         abstract = True
 
 
 class MenuCard(Feature):
-    pass
+
+    def __str__(self):
+        return self.name
 
 
 class Dish(Feature):
@@ -22,3 +24,6 @@ class Dish(Feature):
     preparation_time = models.DurationField()
     is_vegetarian = models.BooleanField(default=False)
     menu_cards = models.ManyToManyField('MenuCard', related_name='%(class)s')
+
+    def __str__(self):
+        return self.name

@@ -7,3 +7,5 @@ venv
 **/*pyc
 
 envs/.env_db
+
+fixtures/all.json
