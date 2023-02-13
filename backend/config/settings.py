@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'rest_framework',
+    'drf_spectacular',
 
     'users.apps.UsersConfig',
     'menucards.apps.MenucardsConfig',
@@ -148,5 +149,11 @@ REST_FRAMEWORK = {
         "rest_framework.authentication.BasicAuthentication",
 
     ],
-    # "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Menu Cards",
+    "DESCRIPTION": "Not yet",
+    "VERSION": "1.0.0",
 }
