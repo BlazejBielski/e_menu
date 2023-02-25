@@ -24,7 +24,7 @@ class MenuCardsView(ListCreateAPIView):
     queryset = MenuCard.objects.all()
 
 
-# TODO add queryset for one card
 class MenuCardView(RetrieveUpdateDestroyAPIView):
     permission_classes = [IsAuthenticatedOrReadOnly]
     serializer_class = MenuCardSerializer
+    queryset = MenuCard.objects.all()

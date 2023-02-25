@@ -4,12 +4,14 @@ from .models import MenuCard, Dish
 
 
 class MenuCardSerializer(ModelSerializer):
+
     class Meta:
         model = MenuCard
         fields = ('id', 'name', 'description', 'date_of_add', 'date_of_actualisation')
 
 
 class DishSerializer(ModelSerializer):
+
     class Meta:
         model = Dish
         fields = ('id', 'name', 'description', 'date_of_add', 'date_of_actualisation', 'price', 'preparation_time',

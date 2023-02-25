@@ -1,6 +1,6 @@
 # eMenu project
 
-Simple online menu
+Restaurant menu application
 
 ## Technologies used
 - Django
