@@ -7,5 +7,6 @@ venv
 **/*pyc
 
 envs/.env_db
+envs/.env_django
 
 fixtures/all.json
