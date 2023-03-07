@@ -2,7 +2,7 @@ from rest_framework.generics import RetrieveUpdateDestroyAPIView, ListCreateAPIV
 from rest_framework.permissions import IsAuthenticated, AllowAny, IsAuthenticatedOrReadOnly
 
 from menucards.models import Dish, MenuCard
-from menucards.serializers import DishSerializer, MenuCardSerializer
+from menucards.serializers import DishSerializer, MenuCardSerializer, MenuCardsSerializer
 
 
 class DishesView(ListCreateAPIView):
@@ -23,5 +23,5 @@ class MenuCardsView(ListCreateAPIView):
 
 
 class MenuCardView(RetrieveUpdateDestroyAPIView):
-    serializer_class = MenuCardSerializer
+    serializer_class = MenuCardsSerializer
     queryset = MenuCard.objects.all()
