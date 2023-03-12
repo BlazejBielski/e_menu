@@ -25,10 +25,5 @@ class MenuCardsView(ListCreateAPIView):
 
 
 class MenuCardView(RetrieveUpdateDestroyAPIView):
-<<<<<<< HEAD
-    permission_classes = [IsAuthenticatedOrReadOnly]
-    serializer_class = MenuCardSerializer
-=======
     serializer_class = MenuCardsSerializer
->>>>>>> EM-009_redis_and_celery_installation
     queryset = MenuCard.objects.all()
