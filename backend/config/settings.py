@@ -205,3 +205,8 @@ EMAIL_USE_TLS = True
 
 DEFAULT_FROM_EMAIL = os.environ.get('FROM_EMAIL')
 LOGIN_REDIRECT_URL = 'success'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = 'media/'
+
+IMAGE_TYPES = ['jpeg', 'png']
