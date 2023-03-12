@@ -30,7 +30,7 @@ class Dish(Feature):
 
 
 class Picture(models.Model):
-    product = models.ForeignKey('Dish', on_delete=models.CASCADE, related_name='images')
+    dish = models.ForeignKey('Dish', on_delete=models.CASCADE, related_name='dishes')
     image = models.FileField(upload_to='images/')
 
     def __str__(self):
