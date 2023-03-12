@@ -37,7 +37,6 @@ services:
       - redis_data-network
 
 
-
 volumes:
   postgres:
   redis_data:
