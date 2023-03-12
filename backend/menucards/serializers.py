@@ -16,3 +16,9 @@ class DishSerializer(ModelSerializer):
         model = Dish
         fields = ('id', 'name', 'description', 'date_of_add', 'date_of_actualisation', 'price', 'preparation_time',
                   'is_vegetarian', 'menu_cards')
+
+
+class MenuCardsSerializer(ModelSerializer):
+    class Meta:
+        model = MenuCard
+        fields = ('name', 'description')

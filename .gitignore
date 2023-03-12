@@ -8,6 +8,9 @@ venv
 
 envs/.env_db
 envs/.env_django
+<<<<<<< HEAD
 
 fixtures/all.json
+=======
+>>>>>>> EM-009_redis_and_celery_installation
 

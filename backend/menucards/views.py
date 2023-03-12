@@ -3,7 +3,7 @@ from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnl
 from django.db.models import Subquery
 
 from menucards.models import Dish, MenuCard
-from menucards.serializers import DishSerializer, MenuCardSerializer
+from menucards.serializers import DishSerializer, MenuCardSerializer, MenuCardsSerializer
 
 
 class DishesView(ListCreateAPIView):
@@ -25,6 +25,10 @@ class MenuCardsView(ListCreateAPIView):
 
 
 class MenuCardView(RetrieveUpdateDestroyAPIView):
+<<<<<<< HEAD
     permission_classes = [IsAuthenticatedOrReadOnly]
     serializer_class = MenuCardSerializer
+=======
+    serializer_class = MenuCardsSerializer
+>>>>>>> EM-009_redis_and_celery_installation
     queryset = MenuCard.objects.all()
